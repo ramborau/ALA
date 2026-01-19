@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenFlow Onboarding</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#00c307',
+              primaryDark: '#009e06',
+              secondary: '#1e293b',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Inter Tight', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- React Phone Number Input CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/react-phone-number-input@3.x/style.css" />
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter Tight', sans-serif;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+
+      /* 3D Button Utility */
+      .btn-3d {
+        transition: all 0.1s;
+        box-shadow: 0px 4px 0px 0px #009e06;
+      }
+      .btn-3d:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 0px 0px #009e06;
+      }
+      
+      /* Range Slider Customization */
+      input[type=range] {
+        -webkit-appearance: none; 
+        background: transparent; 
+        cursor: pointer;
+      }
+      
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 32px;
+        width: 32px;
+        background: transparent;
+        cursor: pointer;
+        margin-top: -14px; 
+        position: relative;
+        z-index: 50;
+      }
+
+      input[type=range]::-moz-range-thumb {
+        height: 32px;
+        width: 32px;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        z-index: 50;
+      }
+
+      input[type=range]:focus {
+        outline: none; 
+      }
+
+      /* ShadCN-style Phone Input Overrides */
+      .PhoneInput {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.75rem; /* rounded-xl */
+        height: 3.5rem; /* h-14 */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: all 0.2s;
+      }
+      
+      .PhoneInput:focus-within {
+        border-color: #00c307;
+        box-shadow: 0 0 0 4px rgba(0, 195, 7, 0.1);
+      }
+      
+      .PhoneInput:hover {
+        border-color: rgba(0, 195, 7, 0.5);
+      }
+
+      .PhoneInputCountry {
+        margin-right: 0.75rem;
+      }
+      
+      .PhoneInputCountrySelect {
+        cursor: pointer;
+      }
+      
+      .PhoneInputCountryIcon {
+        width: 28px;
+        height: 20px;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+
+      .PhoneInputCountrySelectArrow {
+        color: #94a3b8;
+        opacity: 0.7;
+      }
+
+      .PhoneInputInput {
+        flex: 1;
+        min-width: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #0f172a;
+        height: 100%;
+      }
+      
+      .PhoneInputInput::placeholder {
+        color: #94a3b8;
+        font-weight: 300;
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-phone-number-input": "https://esm.sh/react-phone-number-input@3.4.10",
+    "framer-motion": "https://esm.sh/framer-motion@^12.27.1",
+    "clsx": "https://esm.sh/clsx@2.1.0",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@2.2.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
